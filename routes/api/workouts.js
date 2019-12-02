@@ -1,12 +1,11 @@
 const router = require("express").Router();
 const workoutsController = require("../../controllers/workoutsController");
 
-// Matches with "/api/workouts"
+
 router.route("/")
   .get(workoutsController.findAll)
   .post(workoutsController.create);
 
-// Matches with "/api/workouts/:id"
 router
   .route("/:id")
   .get(workoutsController.findById)
